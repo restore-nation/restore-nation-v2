@@ -200,15 +200,17 @@ $(function() {
   (() => {
     fetch('/api/izanami/features').then(r => r.json()).then(r => {
       if (r['restore-nation'].v2.frontend.newlook) {
+        const width = $('#order-button').width()
+        const left = $('#order-button').offset().left
         $('header').html(`
         <nav class="navbar fixed-top navbar-light" style="background-color: #3f8847;">
           <div class="container d-flex justify-content-between">
             <a href="#" class="navbar-brand d-flex align-items-center">
               <i class="fas fa-ustensils"></i>
-              <strong class="resto-name" style="color: red;">{{resto.name}}</strong>
+              <strong class="resto-name" style="color: #dc3545;">{{resto.name}}</strong>
             </a>
             <button type="button" class="btn btn-danger" id="order-button" data-toggle="modal" data-target="#order-modal">Commander</button>
-            <img src="./hat.png" style="position: fixed; right: 103px; top: -8px; width: 50px;"></img>
+            <img src="./hat.png" style="position: fixed; left: ${left + width}px; top: -8px; width: 50px;"></img>
           </div>
         </nav>
         `)
