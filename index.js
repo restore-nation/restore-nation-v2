@@ -205,10 +205,10 @@ $(function() {
           <div class="container d-flex justify-content-between">
             <a href="#" class="navbar-brand d-flex align-items-center">
               <i class="fas fa-ustensils"></i>
-              <strong class="resto-name">{{resto.name}}</strong>
+              <strong class="resto-name" style="color: red;">{{resto.name}}</strong>
             </a>
             <button type="button" class="btn btn-danger" id="order-button" data-toggle="modal" data-target="#order-modal">Commander</button>
-            <img src="./hat.png" style="position: fixed; right: 0; top: 0; width: 50px;"></img>
+            <img src="./hat.png" style="position: fixed; right: 103px; top: -8px; width: 50px;"></img>
           </div>
         </nav>
         `)
