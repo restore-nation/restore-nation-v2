@@ -199,6 +199,7 @@ $(function() {
 
   (() => {
     fetch('/api/izanami/features').then(r => r.json()).then(r => {
+      console.log(r);
       if (r['restore-nation'].v2.frontend.newlook) {
         const width = $('#order-button').width()
         const left = $('#order-button').offset().left
