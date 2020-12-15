@@ -199,7 +199,20 @@ $(function() {
 
   (() => {
     fetch('/api/izanami/features').then(r => r.json()).then(r => {
-      console.log(r);
+      if (r['restore-nation'].v2.frontend.newlook) {
+        $('header').html(`
+        <nav class="navbar fixed-top navbar-light" style="background-color: #3f8847;">
+          <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+              <i class="fas fa-ustensils"></i>
+              <strong class="resto-name">{{resto.name}}</strong>
+            </a>
+            <button type="button" class="btn btn-success" id="order-button" data-toggle="modal" data-target="#order-modal">Commander</button>
+            <img src="./hat.png"></img>
+          </div>
+        </nav>
+        `)
+      }
     })
   })()
 
