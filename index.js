@@ -207,8 +207,8 @@ $(function() {
               <i class="fas fa-ustensils"></i>
               <strong class="resto-name">{{resto.name}}</strong>
             </a>
-            <button type="button" class="btn btn-success" id="order-button" data-toggle="modal" data-target="#order-modal">Commander</button>
-            <img src="./hat.png"></img>
+            <button type="button" class="btn btn-danger" id="order-button" data-toggle="modal" data-target="#order-modal">Commander</button>
+            <img src="./hat.png" style="position: fixed; right: 0; top: 0; width: 50px;"></img>
           </div>
         </nav>
         `)
