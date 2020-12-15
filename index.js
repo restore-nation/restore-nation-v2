@@ -197,4 +197,10 @@ $(function() {
     window.localStorage.removeItem('current-order-' + window.restaurant.uid);
   });
 
+  (() => {
+    fetch('/api/izanami/features').then(r => r.json()).then(r => {
+      console.log(r);
+    })
+  })()
+
 });
