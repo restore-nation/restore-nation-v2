@@ -58,10 +58,10 @@ $(function() {
       const order = getOrder();
 
       let desc = "";
-      const starters = (menu.starters || []).map(e => _.find(resto.carte,  d => d.uid === e.ref))
-      const mains = (menu.main || []).map(e => _.find(resto.carte, d => d.uid === e.ref))
-      const desserts = (menu.dessert || []).map(e => _.find(resto.carte,  d => d.uid === e.ref))
-      const others = (menu.other || []).map(e => _.find(resto.carte,  d => d.uid === e.ref))
+      const starters = (menu.starters || []).map(e => _.find(resto.carte,  d => d.uid === e.ref)).filter(e => !!e)
+      const mains = (menu.main || []).map(e => _.find(resto.carte, d => d.uid === e.ref)).filter(e => !!e)
+      const desserts = (menu.dessert || []).map(e => _.find(resto.carte,  d => d.uid === e.ref)).filter(e => !!e)
+      const others = (menu.other || []).map(e => _.find(resto.carte,  d => d.uid === e.ref)).filter(e => !!e)
 
       function addSection(arr, name) {
         if (arr.length > 0) {
